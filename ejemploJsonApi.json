@@ -1,0 +1,100 @@
+[
+  {
+    "_id": "5bbbc16659879ccdbfbfffe6",
+    "dist": 1.74,
+    "lid": 10811,
+    "fid": 10811,
+    "int_number": 89053,
+    "name": "Base Carlini",
+    "province": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+    "lat": "-62.233",
+    "lon": "-58.667",
+    "zoom": "1",
+    "updated": 1601488800,
+    "weather": {
+      "humidity": 87,
+      "pressure": 1001.4,
+      "st": -23.1,
+      "visibility": 4.5,
+      "wind_speed": 57,
+      "id": 10,
+      "description": "Nublado con ventisca baja",
+      "temp": -10.5,
+      "wing_deg": "Este",
+      "tempDesc": "-10.5ºC"
+    },
+    "forecast": {
+      "_id": "598b871ff9a90f9a3d47074a",
+      "timestamp": "1601469002370",
+      "date_time": "2020-10-01 09:00",
+      "location_id": 10811,
+      "forecast": {
+        "0": {
+          "date": "2020-10-01",
+          "temp_min": -13,
+          "temp_max": -11,
+          "temp_min_sub": null,
+          "temp_noc": null,
+          "radiation": null,
+          "morning": {
+            "weather_id": 20,
+            "description": "Cielo nublado. Ventisca. Viento muy fuerte del sector este con ráfagas. Visibilidad regular ocasionalmente mala. "
+          },
+          "afternoon": {
+            "weather_id": 20,
+            "description": "Nubosidad en disminución. Ventisca. Viento fuerte a regular del sector este con ráfagas. Visibilidad regular."
+          }
+        }
+      }
+    }
+  },
+  {
+    "_id": "5bbbc16659879ccdbfc00019",
+    "dist": 0.03,
+    "lid": 10810,
+    "fid": 10810,
+    "int_number": 88963,
+    "name": "Base Esperanza",
+    "province": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+    "lat": "-63.4",
+    "lon": "-56.984",
+    "zoom": "1",
+    "updated": 1601488800,
+    "weather": {
+      "humidity": 69,
+      "pressure": 1000.4,
+      "st": -29.1,
+      "visibility": 0.8,
+      "wind_speed": 57,
+      "id": 2,
+      "description": "Parcialmente nublado con niebla",
+      "temp": -14.9,
+      "wing_deg": "Sur",
+      "tempDesc": "-14.9ºC"
+    },
+    "forecast": {
+      "_id": "598b871ff9a90f9a3d470749",
+      "timestamp": "1601469002370",
+      "date_time": "2020-10-01 09:00",
+      "location_id": 10810,
+      "forecast": {
+        "0": {
+          "date": "2020-10-01",
+          "temp_min": -18,
+          "temp_max": -14,
+          "temp_min_sub": null,
+          "temp_noc": null,
+          "radiation": null,
+          "morning": {
+            "weather_id": 19,
+            "description": "Cielo mayormente nublado. Probabilidad de neblina. Ventisca. Viento con intensidad de temporal del sector sur con ráfagas de tempestad. Visibilidad muy mala."
+          },
+          "afternoon": {
+            "weather_id": 19,
+            "description": "Cielo parcialmente nublado. Probabilidad de neblina. Ventisca. Viento con intensidad de temporal del sector sur con ráfagas de temporal muy fuerte, en disminución a partir de la noche. Visibilidad muy mala a mala. "
+          }
+        }
+      }
+    }
+  }
+]
