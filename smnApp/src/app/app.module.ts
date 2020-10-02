@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormClimaComponent } from './form-clima/form-clima.component';
 import { SmnApiService } from './smn-api.service';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { SmnApiService } from './smn-api.service';
     FormClimaComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [SmnApiService],
   bootstrap: [AppComponent]
