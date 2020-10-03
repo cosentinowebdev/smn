@@ -21,7 +21,7 @@ export class FormClimaComponent implements OnInit {
     console.log(this.strClimaLocalidad)
   }
   getValores(){
-    console.log(this.strClimaLocalidad[0].name)
+    console.log(this.strClimaLocalidad[0]?.name) 
     //console.log(Object.getPrototypeOf(this.strClimaLocalidad[0]))
   }
 }
