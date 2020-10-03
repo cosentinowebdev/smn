@@ -1,12 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+
 import { AppComponent } from './app.component';
 import { FormClimaComponent } from './form-clima/form-clima.component';
+import { AutocompletarComponent } from './autocompletar/autocompletar.component';
+
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 import { SmnApiService } from './smn-api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { AutocompletarComponent } from './autocompletar/autocompletar.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @NgModule({
@@ -19,7 +22,8 @@ import { AutocompletarComponent } from './autocompletar/autocompletar.component'
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatFormFieldModule
 
   ],
   providers: [SmnApiService],
