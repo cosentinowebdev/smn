@@ -9,6 +9,7 @@ import { SmnApiService } from '../smn-api.service';
 export class FormClimaComponent implements OnInit {
 
   strClimaLocalidad = []
+  posicionLocalidad: any 
   constructor(private SmnApiService: SmnApiService) { 
 
   }

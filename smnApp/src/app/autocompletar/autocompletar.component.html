@@ -1,9 +1,8 @@
 <h4>Basic native select</h4>
   <label>Cars</label>
-  <select matNativeControl required>
-    <option *ngFor="let name of strClimaLocalidad" value="volvo">{{ strClimaLocalidad[0]?.name }}</option>
-    <option value="saab">Saab</option>
-    <option value="mercedes">Mercedes</option>
-    <option value="audi">Audi</option>
+  <select matNativeControl required #seleccion>
+    <option *ngFor="let name of strClimaLocalidad; let i =index" [value]="i" >{{ strClimaLocalidad[i]?.name }}</option>
   </select>
- 
+  <br>
+
+ <button (click)="enviarEvento(seleccion.value)"> Mostrar CLima </button>

@@ -1,10 +1,13 @@
-<app-autocompletar [strClimaLocalidad]= strClimaLocalidad ></app-autocompletar> 
+<app-autocompletar (hijoEvento)="posicionLocalidad=$event" [strClimaLocalidad]= strClimaLocalidad ></app-autocompletar> 
+<p>la posicion de la localidad es {{posicionLocalidad}}</p>
+<p>la temperatura de la localidad es {{ strClimaLocalidad[posicionLocalidad]?.weather.temp }}</p>
 
-
+<!--
 <p>form-clima works!</p>
 <button (click)="onClickSeeJson()">mostrar json</button>
 <p>mostrar valores del array que trajo el Json</p>
 <p>{{ strClimaLocalidad[0]?.name }}</p>
 <button (click)="getValores()">mostrar valores</button>
 <hr>
+-->
 
