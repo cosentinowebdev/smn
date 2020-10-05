@@ -1,28 +1,28 @@
 
-<table>
-
-    <tr *ngFor="let name of strClimaLocalidad; let i =index">
-        
-            <td>{{ strClimaLocalidad[i]?.name }} - {{ strClimaLocalidad[i]?.province }}</td>
-            <td>
-                <ng-template #ocultarBoton>    
-                    <button mat-raised-button color="primary" (click)="clickMostrar(i)">           
-                        Ver Detalles del Clima
-                    </button>
-                </ng-template>
-            </td>
-            <div *ngIf="posicionLocalidad == i; then mostrarValores;else ocultarBoton"></div>
+<table style="width: 100%;">
+    <div *ngFor="let name of strClimaLocalidad; let i =index" class="divTr">
+        <tr class="tr">
             
-            <td>
+                <td>{{ strClimaLocalidad[i]?.name }} - {{ strClimaLocalidad[i]?.province }}</td>
+                <ng-template #ocultarBoton>
+                    <td>
+                            
+                        <button mat-raised-button color="primary" (click)="clickMostrar(i)" alt="Ver Detalles del Clima">           
+                            Ver Detalles del Clima
+                        </button>
+                        
+                    </td>
+                </ng-template>
+                <div *ngIf="posicionLocalidad == i; then mostrarValores;else ocultarBoton"></div>
                 <ng-template #mostrarValores>
-
-                    <app-autocompletar (hijoEvento)="posicionLocalidad=$event" [strClimaLocalidad]= strClimaLocalidad [posicionLocalidad]=posicionLocalidad></app-autocompletar>
-                
-                </ng-template> 
-            </td>
-        
+                    <td>
     
-    </tr>
+                            <app-autocompletar (hijoEvento)="posicionLocalidad=$event" [strClimaLocalidad]= strClimaLocalidad [posicionLocalidad]=posicionLocalidad></app-autocompletar>
+                        
+                    </td>
+                </ng-template>
+        </tr>
+    </div>
 
 </table>
 

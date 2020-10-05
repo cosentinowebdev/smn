@@ -1,0 +1,13 @@
+.divTr{
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 2%;
+    margin-bottom: 1%;
+    border-color: #00000080 ;
+    box-sizing: content-box;
+
+}
+.tr{
+    display: flex;
+    justify-content: space-between;
+}

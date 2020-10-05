@@ -23,7 +23,7 @@ export class FormClimaComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getLocalidadesByPage(this.page)
+    this.getLocalidades()
 
     //this.strClimaLocalidad = this.SmnApiService.getLocalidadClima()
     //this.SmnApiService.getLocalidadClima().subscribe(data=>{this.strClimaLocalidad=data})
@@ -46,7 +46,7 @@ export class FormClimaComponent implements OnInit {
   clickMostrar(valor){
     this.posicionLocalidad=valor;
   }
-  public getLocalidadesByPage(page:number){
+  public getLocalidades(){
     this.SmnApiService.getLocalidadClima().subscribe(data=>{
       this.strClimaLocalidad=data
     })
