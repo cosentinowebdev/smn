@@ -8,9 +8,10 @@ import { NgModule } from '@angular/core';
 import { SmnApiService } from './smn-api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import { MatCardModule } from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -22,8 +23,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatAutocompleteModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatCardModule,
+    MatButtonModule,
+    MatListModule
 
   ],
   providers: [SmnApiService],

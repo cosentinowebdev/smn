@@ -10,15 +10,15 @@ export class AutocompletarComponent implements OnInit {
 
   verClima = new FormControl();
   @Input() strClimaLocalidad;
+  @Input() posicionLocalidad;
   @Output() hijoEvento = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
-  enviarEvento(valor){
-    console.log(valor);
-    this.hijoEvento.emit(valor)
+  enviarEvento(){
+    this.hijoEvento.emit(null)
   }
 
 }

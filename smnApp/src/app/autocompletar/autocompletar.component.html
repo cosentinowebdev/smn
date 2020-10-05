@@ -1,4 +1,5 @@
-<h4>Basic native select</h4>
+<!--
+  <h4>Basic native select</h4>
   <label>Cars</label>
   <select matNativeControl required #seleccion>
     <option *ngFor="let name of strClimaLocalidad; let i =index" [value]="i" >{{ strClimaLocalidad[i]?.name }}</option>
@@ -6,3 +7,16 @@
   <br>
 
  <button (click)="enviarEvento(seleccion.value)"> Mostrar CLima </button>
+  <mat-list-item> <p><span>Humedad :</span> {{strClimaLocalidad[posicionLocalidad]?.weather.humidity}}</p></mat-list-item>
+  <mat-list-item> <p><span>Presion :</span> {{strClimaLocalidad[posicionLocalidad]?.weather.pressure}}</p></mat-list-item>
+  <mat-list-item> <p><span>Visibilidad :</span> {{strClimaLocalidad[posicionLocalidad]?.weather.visibility}}</p></mat-list-item>
+  <mat-list-item> <p><span>viento :</span> {{strClimaLocalidad[posicionLocalidad]?.weather.wind_speed}} {{strClimaLocalidad[posicionLocalidad]?.weather.wing_deg}}</p></mat-list-item>
+-->
+
+<ul>
+  <li><span>Humedad :</span> {{strClimaLocalidad[posicionLocalidad]?.weather.humidity}}</li>
+  <li>{{strClimaLocalidad[posicionLocalidad].weather.temp }}</li>
+  <li>{{posicionLocalidad}}</li>
+</ul>
+<button mat-button color="warn" (click)="enviarEvento()"> Cerrar </button>
+
