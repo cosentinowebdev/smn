@@ -1,9 +1,12 @@
 
-<table style="width: 100%;">
+<table class="tabla">
+
     <div *ngFor="let name of strClimaLocalidad; let i =index" class="divTr">
+        
         <tr class="tr">
             
-                <td>{{ strClimaLocalidad[i]?.name }} - {{ strClimaLocalidad[i]?.province }}</td>
+                <td><h2><span class="titulo2">{{ strClimaLocalidad[i]?.name }}</span> <span class="diminuir">- {{ strClimaLocalidad[i]?.province }}</span></h2></td>
+                
                 <ng-template #ocultarBoton>
                     <td>
                             
@@ -13,7 +16,9 @@
                         
                     </td>
                 </ng-template>
+                
                 <div *ngIf="posicionLocalidad == i; then mostrarValores;else ocultarBoton"></div>
+                
                 <ng-template #mostrarValores>
                     <td>
     

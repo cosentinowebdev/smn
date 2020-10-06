@@ -1,9 +1,28 @@
-.example-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
-  }
-  
-  .example-full-width {
-    width: 100%;
-  }
+li{
+  list-style:none;
+}
+.contCaractClima{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-left: black 1px solid;
+}
+.titulo{
+  font-size: 24px;
+  font-weight: 500;
+}
+.titulo3{
+  font-size: 12px;
+  font-weight: 200;
+  margin-left: 1%;
+}
+.boldLista{
+  font-size: 14px;
+  font-weight: bold;
+}
+.contenedor{
+  margin-left: 1%;
+}
+.padding{
+  margin-left: 1%;
+}

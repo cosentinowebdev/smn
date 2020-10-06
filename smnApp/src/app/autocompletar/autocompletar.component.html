@@ -12,11 +12,36 @@
   <mat-list-item> <p><span>Visibilidad :</span> {{strClimaLocalidad[posicionLocalidad]?.weather.visibility}}</p></mat-list-item>
   <mat-list-item> <p><span>viento :</span> {{strClimaLocalidad[posicionLocalidad]?.weather.wind_speed}} {{strClimaLocalidad[posicionLocalidad]?.weather.wing_deg}}</p></mat-list-item>
 -->
-
-<ul>
-  <li><span>Humedad :</span> {{strClimaLocalidad[posicionLocalidad]?.weather.humidity}}</li>
-  <li>{{strClimaLocalidad[posicionLocalidad].weather.temp }}</li>
-  <li>{{posicionLocalidad}}</li>
-</ul>
-<button mat-button color="warn" (click)="enviarEvento()"> Cerrar </button>
-
+<article class="contenedor">
+  <h3><span class="titulo">Datos Actuales </span>| Valores actualizados al: {{strClimaLocalidad[posicionLocalidad]?.forecast.date_time}}</h3>
+  <div class="contCaractClima">  
+    
+    <div>
+      <ul>
+        <li><span class="boldLista">Temperatura :</span> {{strClimaLocalidad[posicionLocalidad]?.weather.tempDesc}}</li>
+        <li><span class="boldLista">Viento :</span> {{strClimaLocalidad[posicionLocalidad].weather.wing_deg }} a {{strClimaLocalidad[posicionLocalidad].weather.wind_speed }} km/h</li>
+        <li><span class="boldLista">Humedad :</span> {{strClimaLocalidad[posicionLocalidad]?.weather.humidity}} %</li>
+        <li><span class="boldLista">presión :</span> {{strClimaLocalidad[posicionLocalidad]?.weather.pressure}} hPa</li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li><span class="boldLista">Temperatura Minima :</span> {{strClimaLocalidad[posicionLocalidad]?.forecast.forecast[0].temp_max}} °</li>
+        <li><span class="boldLista">Temperatura Minima :</span> {{strClimaLocalidad[posicionLocalidad]?.forecast.forecast[0].temp_min }} °</li>
+        <li><span class="boldLista">Sensacion Termica :</span> {{strClimaLocalidad[posicionLocalidad]?.weather.st}} °</li>
+      </ul>
+    </div>
+  </div>
+  <div class="contCaractClima">
+    <mat-card class="padding">
+      <mat-card-title>Pronostico extendido</mat-card-title>
+      <mat-card-content>
+        <ul>
+          <li><span class="boldLista">Pronostico Matutino :</span> {{strClimaLocalidad[posicionLocalidad]?.forecast.forecast[0].morning.description}}</li>
+          <li><span class="boldLista">Pronostico Diurno :</span> {{strClimaLocalidad[posicionLocalidad]?.forecast.forecast[0].afternoon.description }}</li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <button mat-button color="warn" (click)="enviarEvento()"> Cerrar </button>
+</article>
