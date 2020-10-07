@@ -1,4 +1,4 @@
-n
+
 <article class="contenedor">
   <h3><span class="titulo">Datos Actuales </span>| Valores actualizados al: {{strClimaLocalidad[posicionLocalidad]?.forecast.date_time}}</h3>
   <div class="contCaractClima">  
@@ -30,5 +30,5 @@ n
       </mat-card-content>
     </mat-card>
   </div>
-  <button mat-button color="warn" (click)="enviarEvento()" matTooltip="Cerrar descripción"> Cerrar </button>
+  <button mat-button color="warn" (click)="enviarEvento()" matTooltip="Cerrar descripción" [matTooltipShowDelay]="0" [matTooltipHideDelay]="1000"> Cerrar </button>
 </article>

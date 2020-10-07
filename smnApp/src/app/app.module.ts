@@ -15,6 +15,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule,Routes } from '@angular/router';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 const appRoutes: Routes = [
@@ -40,7 +41,8 @@ const appRoutes: Routes = [
     MatCardModule,
     MatButtonModule,
     MatListModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    MatTooltipModule
 
   ],
   providers: [SmnApiService],

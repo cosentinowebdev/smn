@@ -25,31 +25,15 @@ export class FormClimaComponent implements OnInit {
   ngOnInit() {
     this.getLocalidades()
 
-    //this.strClimaLocalidad = this.SmnApiService.getLocalidadClima()
-    //this.SmnApiService.getLocalidadClima().subscribe(data=>{this.strClimaLocalidad=data})
-    /*
-    this._shopService.listShops(page).subscribe(data =>{
-        this.shops = data;
-        this.numShops = data.length;
-        this.totalPages = Math.round(this.numShops / this.numResults);
-    });
-    */
-
   }
   onClickSeeJson(){
     console.log(this.strClimaLocalidad)
-  }
-  getValores(){
-    console.log(this.strClimaLocalidad[0]) 
-    //console.log(Object.getPrototypeOf(this.strClimaLocalidad[0]))
-  }
-  clickMostrar(valor){
-    this.getValores();
-    this.posicionLocalidad=valor;
   }
   public getLocalidades(){
     this.SmnApiService.getLocalidadClima().subscribe(data=>{
       this.strClimaLocalidad=data
     })
   }
+  
 }
+
