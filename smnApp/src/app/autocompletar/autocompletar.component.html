@@ -1,17 +1,4 @@
-<!--
-  <h4>Basic native select</h4>
-  <label>Cars</label>
-  <select matNativeControl required #seleccion>
-    <option *ngFor="let name of strClimaLocalidad; let i =index" [value]="i" >{{ strClimaLocalidad[i]?.name }}</option>
-  </select>
-  <br>
-
- <button (click)="enviarEvento(seleccion.value)"> Mostrar CLima </button>
-  <mat-list-item> <p><span>Humedad :</span> {{strClimaLocalidad[posicionLocalidad]?.weather.humidity}}</p></mat-list-item>
-  <mat-list-item> <p><span>Presion :</span> {{strClimaLocalidad[posicionLocalidad]?.weather.pressure}}</p></mat-list-item>
-  <mat-list-item> <p><span>Visibilidad :</span> {{strClimaLocalidad[posicionLocalidad]?.weather.visibility}}</p></mat-list-item>
-  <mat-list-item> <p><span>viento :</span> {{strClimaLocalidad[posicionLocalidad]?.weather.wind_speed}} {{strClimaLocalidad[posicionLocalidad]?.weather.wing_deg}}</p></mat-list-item>
--->
+n
 <article class="contenedor">
   <h3><span class="titulo">Datos Actuales </span>| Valores actualizados al: {{strClimaLocalidad[posicionLocalidad]?.forecast.date_time}}</h3>
   <div class="contCaractClima">  
@@ -43,5 +30,5 @@
       </mat-card-content>
     </mat-card>
   </div>
-  <button mat-button color="warn" (click)="enviarEvento()"> Cerrar </button>
+  <button mat-button color="warn" (click)="enviarEvento()" matTooltip="Cerrar descripción"> Cerrar </button>
 </article>

@@ -1,92 +1,33 @@
+<section>
+    <table class="tabla" id="tabla">
 
-<table class="tabla">
-
-    <div *ngFor="let name of strClimaLocalidad; let i =index" class="divTr">
-        
-        <tr class="tr">
+        <div *ngFor="let name of strClimaLocalidad; let i =index" class="divTr">
             
-                <td><h2><span class="titulo2">{{ strClimaLocalidad[i]?.name }}</span> <span class="diminuir">- {{ strClimaLocalidad[i]?.province }}</span></h2></td>
+            <tr class="tr">
                 
-                <ng-template #ocultarBoton>
-                    <td>
+                    <td><h2><span class="titulo2">{{ strClimaLocalidad[i]?.name }}</span> <span class="diminuir">- {{ strClimaLocalidad[i]?.province }}</span></h2></td>
+                    
+                    <ng-template #ocultarBoton>
+                        <td>
+                                
+                            <button mat-raised-button color="primary" (click)="clickMostrar(i)" alt="Ver Detalles del Clima" matTooltip="hacé click para ver los detalles del clima">           
+                                Ver Detalles del Clima
+                            </button>
                             
-                        <button mat-raised-button color="primary" (click)="clickMostrar(i)" alt="Ver Detalles del Clima">           
-                            Ver Detalles del Clima
-                        </button>
-                        
-                    </td>
-                </ng-template>
-                
-                <div *ngIf="posicionLocalidad == i; then mostrarValores;else ocultarBoton"></div>
-                
-                <ng-template #mostrarValores>
-                    <td>
-    
-                            <app-autocompletar (hijoEvento)="posicionLocalidad=$event" [strClimaLocalidad]= strClimaLocalidad [posicionLocalidad]=posicionLocalidad></app-autocompletar>
-                        
-                    </td>
-                </ng-template>
-        </tr>
-    </div>
+                        </td>
+                    </ng-template>
+                    
+                    <div *ngIf="posicionLocalidad == i; then mostrarValores;else ocultarBoton"></div>
+                    
+                    <ng-template #mostrarValores>
+                        <td>
+        
+                                <app-autocompletar (hijoEvento)="posicionLocalidad=$event" [strClimaLocalidad]= strClimaLocalidad [posicionLocalidad]=posicionLocalidad ></app-autocompletar>
+                            
+                        </td>
+                    </ng-template>
+            </tr>
+        </div>
 
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-<app-autocompletar (hijoEvento)="posicionLocalidad=$event" [strClimaLocalidad]= strClimaLocalidad ></app-autocompletar> 
-<p>la posicion de la localidad es {{posicionLocalidad}}</p>
-<p>la temperatura de la localidad es {{ strClimaLocalidad[posicionLocalidad]?.weather.temp }}</p>
-<div *ngIf="posicionLocalidad;then mostrarCard;else mostrarMensaje">
-
-</div>
-<ng-template #mostrarCard>
-    <mat-card>
-        <mat-card-title>Tiempor actual en {{ strClimaLocalidad[posicionLocalidad]?.name }}</mat-card-title>
-        <mat-card-content> 
-            <p>{{ strClimaLocalidad[posicionLocalidad]?.province }} a las {{strClimaLocalidad[posicionLocalidad]?.forecast.date_time}}</p>
-            <mat-grid-list cols="2" rowHeight="2:1">
-                <mat-grid-tile>
-                    <span>Temperatura Actual</span> {{strClimaLocalidad[posicionLocalidad]?.weather.tempDesc}}
-                    {{strClimaLocalidad[posicionLocalidad]?.weather.description}}
-                </mat-grid-tile>
-                <mat-grid-tile>
-                    <mat-list>
-                        
-                    </mat-list>
-                </mat-grid-tile>
-              </mat-grid-list>
-              <hr>
-        </mat-card-content>
-    </mat-card>
-</ng-template>
-<ng-template #mostrarMensaje>
-    <mat-card>
-        <mat-card-title>Debe seleccionar una localidad de la republica argentina para obtener la informacion</mat-card-title>
-    </mat-card>
-</ng-template>
-
-
-
-
-
-<p>form-clima works!</p>
-<button (click)="onClickSeeJson()">mostrar json</button>
-<p>mostrar valores del array que trajo el Json</p>
-<p>{{ strClimaLocalidad[0]?.name }}</p>
-<button (click)="getValores()">mostrar valores</button>
-<hr>
--->
-
+    </table>
+</section>

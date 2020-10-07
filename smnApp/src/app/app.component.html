@@ -1,16 +1,16 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<header class="contenedorHead">
-    <h1>Estado del clima de la <span class="bold">Republica Argentina</span></h1>
-    <img src="../assets/imagenes/logo.png" alt="Logo">
-    <nav></nav>
-</header>
+<app-header></app-header>
 <hr>
 <div class="contenedor">
-    
-    <app-form-clima></app-form-clima>
+    <router-outlet></router-outlet>
 </div>
+<hr>
 <footer>
-    
+    <ul class="lista">
+        <li>Proyecto realizado por Rodrigo Cosentino</li>
+        <li><a target="_blank" href="mailto:direccion@correo.com&subject=Estas Adentro"><i class="far fa-envelope-open botonFooter"></i></a><a target="_blank" href="https://api.whatsapp.com/send?phone=541136622633&text=hola%20rodrigo%20estas%20adentro" class="ocultar"><i class="fab fa-whatsapp botonFooter botonWApp"></i></a><a target="_blank" href="https://github.com/cosentinowebdev/smn"><i class="fab fa-github-alt botonFooter"></i></a></li>
+        <li class="pequeño">El boton de whatsapp solo se visualiza en formato celular o tablet</li>
+    </ul>
 </footer>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 

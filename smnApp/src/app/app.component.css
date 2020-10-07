@@ -14,3 +14,25 @@
     font-size: 24px;
     font-weight: 500;
 }
+.botonWApp{
+    color: #fff ;
+    background-color: #28a745 ;
+    border-color: #28a745 ;
+}
+.botonFooter{
+    margin-left: 2%;
+    border-radius: 4px;
+    font-size: 3em ;
+}
+.pequeño{
+    font-size: 1em ;
+    color: grey;
+}
+.lista{
+    list-style:none;
+}
+@media (min-width: 768px) { 
+    .ocultar{
+        display: none;
+    }
+}
