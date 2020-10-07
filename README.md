@@ -1,9 +1,13 @@
 # Codigo para consumir api smn argentino
 ## Como ejecutar el código
 Ejecutar el código desde un computador
-* 'ng serve'
+~~~
+ ng serve
+~~~
 Ejecutar el código desde un hosting
-* 'ng build'
+~~~
+ ng build
+~~~
 * crea la carpeta /dist
 * si se utiliza un hosting como netlify.com se deberá subir la carpeta completa [smnapp.netlify.app/#/lista](URL "smnapp.netlify.app/#/lista")
 * si se utiliza un hosting como donweb se deberá subir la carpeta a partir de /dist/smnApp [http://c1970754.ferozo.com/#/lista](URL "http://c1970754.ferozo.com/#/lista")
