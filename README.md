@@ -9,8 +9,8 @@ Ejecutar el código desde un hosting
  ng build
 ~~~
 * crea la carpeta /dist
-* si se utiliza un hosting como netlify.com se deberá subir la carpeta completa [smnapp.netlify.app/#/lista](URL "smnapp.netlify.app/#/lista")
-* si se utiliza un hosting como donweb se deberá subir la carpeta a partir de /dist/smnApp [http://c1970754.ferozo.com/#/lista](URL "http://c1970754.ferozo.com/#/lista")
+* si se utiliza un hosting como netlify.com se deberá subir la carpeta completa [smnapp.netlify.app/#/lista]("smnapp.netlify.app/#/lista")
+* si se utiliza un hosting como donweb se deberá subir la carpeta a partir de /dist/smnApp [http://c1970754.ferozo.com/#/lista]("http://c1970754.ferozo.com/#/lista")
 ## Consigna
 El servicio meteorológico nacional (SMN) brinda mediante una API la información
 actualizada del clima para las ciudades más importantes de Argentina.
