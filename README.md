@@ -1,4 +1,12 @@
 # Codigo para consumir api smn argentino
+## Como ejecutar el código
+Ejecutar el código desde un computador
+* 'ng serve'
+Ejecutar el código desde un hosting
+* 'ng build'
+* crea la carpeta /dist
+* si se utiliza un hosting como netlify.com se deberá subir la carpeta completa [smnapp.netlify.app/#/lista](URL "smnapp.netlify.app/#/lista")
+* si se utiliza un hosting como donweb se deberá subir la carpeta a partir de /dist/smnApp [http://c1970754.ferozo.com/#/lista](URL "http://c1970754.ferozo.com/#/lista")
 ## Consigna
 El servicio meteorológico nacional (SMN) brinda mediante una API la información
 actualizada del clima para las ciudades más importantes de Argentina.
@@ -13,4 +21,4 @@ No hay restricciones en cuanto a la tecnología utilizar, ya sea si se utiliza H
 puro o algún framework basado en componentes.
 Se valora el uso de estilos que mejoren la calidad visual y experiencia del usuario al
 utilizar la aplicación
-## Como ejecutar el codigo
+

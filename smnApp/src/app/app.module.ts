@@ -16,12 +16,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule,Routes } from '@angular/router';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import * as $ from 'jquery';
+$('#elemId').width();
 
 
 const appRoutes: Routes = [
   {path: 'lista', component: FormClimaComponent},
   {path: 'home', component: HomeComponent},
   {path: '', redirectTo:'home',pathMatch:'full'}
+  
 ]
 
 @NgModule({
@@ -30,7 +33,8 @@ const appRoutes: Routes = [
     FormClimaComponent,
     AutocompletarComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -41,11 +45,14 @@ const appRoutes: Routes = [
     MatCardModule,
     MatButtonModule,
     MatListModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {useHash: true}),
     MatTooltipModule
 
   ],
   providers: [SmnApiService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent], 
+  exports:[RouterModule]
 })
-export class AppModule { }
+export class AppModule {
+  
+ }

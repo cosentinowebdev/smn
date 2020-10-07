@@ -19,21 +19,28 @@ export class FormClimaComponent implements OnInit {
   
 
   constructor(private SmnApiService: SmnApiService) { 
-
+    
   }
 
   ngOnInit() {
     this.getLocalidades()
+    
+  }
+  ngAfterViewChecked(){
 
   }
   onClickSeeJson(){
     console.log(this.strClimaLocalidad)
+  }
+  clickMostrar(valor){
+    this.posicionLocalidad=valor;
   }
   public getLocalidades(){
     this.SmnApiService.getLocalidadClima().subscribe(data=>{
       this.strClimaLocalidad=data
     })
   }
+
   
 }
 
