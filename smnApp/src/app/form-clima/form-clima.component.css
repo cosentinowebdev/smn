@@ -5,7 +5,6 @@
     margin-bottom: 1%;
     border-color: #00000080 ;
     box-sizing: content-box;
-
 }
 .tr{
     display: flex;
@@ -21,4 +20,9 @@
 }
 .tabla{
     width: 100%;
+}
+.boton{
+    position:fixed; 
+    top:90%; 
+    right:0;
 }
